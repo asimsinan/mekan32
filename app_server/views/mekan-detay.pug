@@ -1,45 +1,37 @@
 extends layout
+include ortak_fonksiyonlar/fonksiyonlar
 block content
  .row.page-header
   .col-lg-12
-    h1 Starbucks
+    h1=sayfaBaslik
  .row
    .col-xs-12.col-md-12
     .row
      .col-xs-12.col-sm-6
         p.rating
-         span.glyphicon.glyphicon-star
-         span.glyphicon.glyphicon-star
-         span.glyphicon.glyphicon-star
-         span.glyphicon.glyphicon-star
-         span.glyphicon.glyphicon-star-empty
-        p Centrum Garden AVM
+         +puanOlustur(mekanBilgisi.puan)
+        p=mekanBilgisi.adres
         .panel.panel-primary
          .panel-heading
             h2.panel-title Açılış Saatleri
          .panel-body
+          each saat in mekanBilgisi.saatler
             p
-                | Pazartesi-Cuma: 7:00-23:00
-            p
-                | Cumartesi: 8:00-22:00
-            p
-                | Pazar: Kapalı
+                | #{saat.gunler}: 
+                if(saat.kapali)
+                 | Kapalı
+                else
+                 | #{saat.acilis}-#{saat.kapanis}
         .panel.panel-primary
          .panel-heading
             h2.panel-title Neler Var
          .panel-body
-            span.label.label-warning
+            each imkan in mekanBilgisi.imkanlar
+             span.label.label-warning
                 span.glyphicon.glypicon-ok
-                | &nbsp; Dünya Kahveleri
-            | &nbsp; 
-            span.label.label-warning
-                span.glyphicon.glypicon-ok
-                | &nbsp; Kekler
-            | &nbsp; 
-            span.label.label-warning
-                span.glyphicon.glypicon-ok
-                | &nbsp; Pastalar
-            | &nbsp;
+                | &nbsp; #{imkan}
+             | &nbsp; 
+            
      .col-xs-12.col-sm-6.location-map
       .panel.panel-primary
         .panel-heading
@@ -56,19 +48,17 @@ block content
         a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
         h2.panel-title Müşteri Yorumları
       .panel-body.review-container
-       .row
-        .review
+       each yorum in mekanBilgisi.yorumlar
+        .row
+         .review
           .well.well-sm.review-header
             span.rating
-             span.glyphicon.glyphicon-star
-             span.glyphicon.glyphicon-star
-             span.glyphicon.glyphicon-star
-             span.glyphicon.glyphicon-star
-             span.glyphicon.glyphicon-star-empty
-            span.reviewAuthor Asım Sinan Yüksel
-            small.reviewTimestamp &nbsp;  23 Kasım 2020
+             +puanOlustur(yorum.puan)
+            span.reviewAuthor=yorum.yorumYapan
+            | &nbsp; 
+            small.reviewTimestamp=yorum.tarih
           .col-xs-12
-             p Kahveler güzel.
+             p=yorum.yorumMetni
 
 
 
