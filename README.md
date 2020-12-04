@@ -6,6 +6,7 @@ Mekan32 projesi Web Teknolojileri ve Programlama dersinde dönem boyunca üzerin
 * Sunucu platformu: NodeJS
 * Veritabanı: MongoDB
 * HTML Şablon Motoru: Pug
+* CSS Çatısı: Bootstrap
 * Programlama Dili: Javascript
 * Sürüm Kontrolü: Git
 * Bulut Uygulama Platformu: Heroku
