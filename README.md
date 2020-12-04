@@ -1,4 +1,4 @@
-# Mekan32: [https://mekan32.herokuapp.com](https://mekan32.herokuapp.com)
+# Mekan32: [https://asimsinanyuksel.herokuapp.com](https://asimsinanyuksel.herokuapp.com)
 Mekan32 projesi Web Teknolojileri ve Programlama dersinde dönem boyunca üzerinde çalışacağımız ve MEAN yığını kullanarak geliştireceğimiz bir projedir. Uygulama, Isparta bazlı çalışacak olup, kullanıcının konumuna belirlenen uzaklıktaki restorant, kafe vb. yerleri listeleyecek.
 
 ## Kullanılacak Teknolojiler:
