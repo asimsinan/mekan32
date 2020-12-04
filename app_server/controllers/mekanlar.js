@@ -1,7 +1,7 @@
-
 const anaSayfa=function(req, res, next) {
   res.render('mekanlar-liste', 
-  	{ 'baslik': 'Anasayfa',
+  	{
+      'baslik': 'Anasayfa',
   	'sayfaBaslik':{
   		'siteAd':'Mekan32',
   		'aciklama':'Isparta civarındaki mekanları keşfedin'
@@ -20,7 +20,7 @@ const anaSayfa=function(req, res, next) {
       'puan':2,
       'imkanlar':['Kahve','Çay','Pasta'],
       'mesafe':'1km'
-    },
+    }
     ]
   }
 
@@ -65,7 +65,14 @@ const mekanBilgisi=function(req, res, next) {
           'puan':3,
           'tarih':'27.11.2020',
           'yorumMetni':'Kahveleri güzel.'
+        },
+        {
+          'yorumYapan':'asass',
+          'puan':4,
+          'tarih':'27.11.2020',
+          'yorumMetni':'Kahvelerasasl.'
         }
+        
       ]
 
     }
