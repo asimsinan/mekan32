@@ -10,6 +10,7 @@ Mekan32 projesi Web Teknolojileri ve Programlama dersinde dönem boyunca üzerin
 * Sürüm Kontrolü: Git
 * Bulut Uygulama Platformu: Heroku
 * Haberleşme: REST API
+* Arayüz Çatısı: Angular
 
 ## Uygulamada Yer Alacak Özellikler:
 * Anasayfada konum civarındaki mekanların listelenmesi.
