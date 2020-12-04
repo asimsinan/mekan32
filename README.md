@@ -21,5 +21,8 @@ Mekan32 projesi Web Teknolojileri ve Programlama dersinde dönem boyunca üzerin
 * Tasarım deseni olarak MVC benimsenecek.
 * Altyapıda haberleşme REST API ile olacak.
 
-
+## Şu Ana Kadar Yapılanlar:
+* mekan32-1 dallanmasında View katmanı hazırlandı. Arayüz tasarlandı. Arayüze statik veriler eklenerek sayfalar şekillendirildi.
+* meakn32-2 dallanmasında veriler arayüzden ayrıştırıldı, dinamik bir yapı elde edildi. Veriler Controller katmanına aktarıldı. Arayüzdeki bilgiler değişkenler aracılığı ile gösterildi.
+* mekan-32-3: ....
 
