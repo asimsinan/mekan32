@@ -20,7 +20,7 @@ Mekan32 projesi Web Teknolojileri ve Programlama dersinde dönem boyunca üzerin
 * Kullanıcılar mekana yorum yapabilecek ve puan verebilecek.
 * İlerleyen aşamalarda yönetici sayfası eklenebilir. Mekan ekleme, silme, güncelleme, kullanıcı girişi, kayıt olma özellikleri dahil edilebilir.
 * Tasarım deseni olarak MVC benimsenecek.
-* Altyapıda haberleşme REST API ile olacak.
+* Altyapıda haberleşme REST API ile olacak. REST API'yi kendimiz yazacağız.
 
 ## Şu Ana Kadar Yapılanlar:
 * mekan32-1 dallanmasında View katmanı hazırlandı. Arayüz tasarlandı. Arayüze statik veriler eklenerek sayfalar şekillendirildi.
