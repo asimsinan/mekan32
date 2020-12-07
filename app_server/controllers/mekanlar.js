@@ -19,7 +19,7 @@ const anaSayfa=function(req, res, next) {
       {
       'ad':'Gloria Jeans',
       'adres':'SDÜ Doğu Kampüsü',
-      'puan':2,
+      'puan':5,
       'imkanlar':['Kahve','Çay','Pasta'],
       'mesafe':'1km'
     }
