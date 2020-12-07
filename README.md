@@ -5,6 +5,7 @@ Mekan32 projesi Web Teknolojileri ve Programlama dersinde dönem boyunca üzerin
 * Orta katman: ExpressJS
 * Sunucu platformu: NodeJS
 * Veritabanı: MongoDB
+* Bulut Veritabanı: MongoDB Cloud
 * HTML Şablon Motoru: Pug
 * CSS Çatısı: Bootstrap
 * Programlama Dili: Javascript
