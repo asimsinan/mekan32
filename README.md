@@ -27,4 +27,5 @@ Mekan32 projesi Web Teknolojileri ve Programlama dersinde dönem boyunca üzerin
 * mekan32-1 dallanmasında View katmanı hazırlandı. Arayüz tasarlandı. Arayüze statik veriler eklenerek sayfalar şekillendirildi.
 * meakn32-2 dallanmasında veriler arayüzden ayrıştırıldı, dinamik bir yapı elde edildi. Veriler Controller katmanına aktarıldı. Arayüzdeki bilgiler değişkenler aracılığı ile gösterildi.
 * mekan-32-3 dallanmasında model katmanı eklendi, mongodb veritabanı bağlantısı için gerekli kodlar yazıldı, mongoose şemaları tanımlandı.
+* mekan-32-4 dallanmasında REST API'ye giriş yapıldı ve get metotları eklendi. API uygulamadan ayrı bir klasör içinde gerçekleştirilecek. Model katmanı API klasörüne taşındı.
 
