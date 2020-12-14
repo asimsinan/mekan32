@@ -1,11 +1,12 @@
 var createError = require('http-errors');
-require('./app_server/models/db'); 
+require('./app_api/models/db'); 
 var express = require('express');
 var favicon = require('serve-favicon')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var routesApi = require('./app_api/routes/index');
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/api',routesApi);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

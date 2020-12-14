@@ -1,5 +1,6 @@
 var mongoose = require( 'mongoose' ); 
 
+
 var saatSema = new mongoose.Schema(
     { 
         gunler:{type:String,required:true},
@@ -31,6 +32,7 @@ var mekanSema = new mongoose.Schema(
         yorumlar:[yorumSema]
     },{usePushEach: true}
     ); 
+
 mongoose.model('mekan',mekanSema,'mekanlar');
 
 
