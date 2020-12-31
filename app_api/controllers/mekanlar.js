@@ -124,7 +124,7 @@ const mekanGuncelle= function (req, res) {
 					});
 				}); }
 
-		const mekanSil= function (req, res) {
+const mekanSil= function (req, res) {
 
 			var mekanid = req.params.mekanid;
 			if (mekanid) {
@@ -146,7 +146,7 @@ const mekanGuncelle= function (req, res) {
 			};
 
 
-			const mekanGetir=function(req, res) {
+const mekanGetir=function(req, res) {
 				if(req.params&&req.params.mekanid){
 					Mekan.findById(req.params.mekanid)
 					.exec(function(hata,mekan){
@@ -166,7 +166,7 @@ const mekanGuncelle= function (req, res) {
 			}
 
 
-			module.exports={
+	module.exports={
 				mekanlariListele,
 				mekanEkle,
 				mekanGetir,

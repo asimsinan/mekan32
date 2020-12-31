@@ -108,7 +108,7 @@ const yorumGetir = function (req, res) {
     					}//varsa cevap nesnesi döndür.içine mekan adı, idsi ve yorumu ekle
     					else {
     						cevap= {
-    							mekan : {
+    							    mekan : {
     								ad : mekan.ad,
     								id : req.params.mekanid
     							},
