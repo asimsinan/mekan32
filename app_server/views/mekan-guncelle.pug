@@ -1,0 +1,57 @@
+extends layout
+include ortak_fonksiyonlar/fonksiyonlar
+block content
+  .row.page-header
+    .col-lg-12
+      h1= sayfaBaslik
+  .row
+    .col-xs-12.col-md-6
+      form.form-horizontal(action="", method="post", role="form", id="mekanEkle")
+        - if (hata == "evet")
+          .alert.alert-danger(role="alert") Tüm alanlar gerekli       
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="mekanAdi") Mekan Adı
+          .col-xs-12.col-sm-10
+            input#mekanAdi.form-control(name="mekanAdi" value= mekanBilgisi.ad)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="mekanAdresi") Mekan Adresi
+          .col-xs-12.col-sm-10
+            input#mekanAdresi.form-control(name="mekanAdresi" value= mekanBilgisi.adres)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="imkanlar") İmkanlar    
+          .col-xs-12.col-sm-10
+            input#imkanlar.form-control(name="imkanlar" value=mekanBilgisi.imkanlar)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="enlem") Enlem
+          .col-xs-12.col-sm-10
+            input#enlem.form-control(name="enlem" value= mekanBilgisi.koordinatlar.enlem)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="boylam") Boylam
+          .col-xs-12.col-sm-10
+            input#boylam.form-control(name="boylam" value= mekanBilgisi.koordinatlar.boylam)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="gunler1") Günler-1
+          .col-xs-12.col-sm-10
+            input#gunler1.form-control(name="gunler1" value= mekanBilgisi.saatler[0].gunler) 
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="acilis1") Açılış-1
+          .col-xs-12.col-sm-10
+            input#acilis1.form-control(name="acilis1" value= mekanBilgisi.saatler[0].acilis)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="kapanis1") Kapanış-1
+          .col-xs-12.col-sm-10
+            input#kapanis1.form-control(name="kapanis1" value= mekanBilgisi.saatler[0].kapanis)    
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="gunler2") Günler-2
+          .col-xs-12.col-sm-10
+            input#gunler2.form-control(name="gunler2" value= mekanBilgisi.saatler[1].gunler) 
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="acilis2" ) Açılış-2
+          .col-xs-12.col-sm-10
+            input#acilis2.form-control(name="acilis2" value= mekanBilgisi.saatler[1].acilis)    
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="kapanis2") Kapanış-2
+          .col-xs-12.col-sm-10
+            input#kapanis2.form-control(name="kapanis2" value= mekanBilgisi.saatler[1].kapanis)              
+        button.btn.btn-danger.pull-right Mekanı Güncelle
+    .col-xs-12.col-md-4

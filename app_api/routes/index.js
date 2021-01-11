@@ -9,6 +9,10 @@ router
 .post(ctrlMekanlar.mekanEkle);
 
 router
+.route('/admin')
+.get(ctrlMekanlar.tumMekanlariListele)
+
+router
 .route('/mekanlar/:mekanid')
 .get(ctrlMekanlar.mekanGetir)
 .put(ctrlMekanlar.mekanGuncelle)

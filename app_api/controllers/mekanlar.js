@@ -56,6 +56,30 @@ const mekanlariListele= async(req, res) =>{
     }
 }
 
+const tumMekanlariListele= function (req, res) {
+        Mekan.find({},'ad adres puan imkanlar _id',function(hata, sonuclar) {
+      //dönen sonuçları tutacağımız diziyi tanımla
+      var mekanlar = [];
+      if (hata) {
+        cevapOlustur (res, 404, hata);
+      } else {
+        //her bir sonucu dolaş ve mekanlara ekle
+        sonuclar.forEach(function(doc) {
+            mekanlar.push(
+            {
+                ad: doc.ad,
+                adres: doc.adres,
+                puan: doc.puan,
+                imkanlar: doc.imkanlar,
+                _id: doc._id
+            }); });
+        //json formatında mekanları döndür
+        cevapOlustur(res, 200, mekanlar);
+    }
+});
+}
+
+
 const mekanEkle= function (req, res) {
 	Mekan.create({
 		ad: req.body.ad,
@@ -104,8 +128,7 @@ const mekanGuncelle= function (req, res) {
 					gelenMekan.ad = req.body.ad;
 					gelenMekan.adres = req.body.adres;
 					gelenMekan.imkanlar = req.body.imkanlar.split(",");
-					gelenMekan.mesafe = [parseFloat(req.body.enlem),
-					parseFloat(req.body.boylam)];
+					gelenMekan.koordinatlar=[parseFloat(req.body.enlem), parseFloat(req.body.boylam)]
 					gelenMekan.saatler = [{
 						gunler: req.body.gunler1,
 						acilis: req.body.acilis1,
@@ -173,5 +196,6 @@ const mekanGetir=function(req, res) {
 				mekanEkle,
 				mekanGetir,
 				mekanSil,
-				mekanGuncelle
+				mekanGuncelle,
+				tumMekanlariListele
 			}
